@@ -1,0 +1,155 @@
+/* grid https://youtu.be/MEOR2b69Pl4?si=jaVgvVfoT6lpGVo2 */
+
+/*-------------- Сброс настроек --------------*/
+*,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: 1024px;
+    height: 768px;
+}
+
+h1,h2,h3,h4,p { /* сброс отступа от текста */
+    margin: 0;
+}
+
+ul { /* сброс значений у списка */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img { /* сброс значений у картинок */
+    margin: 0;
+    padding: 0;
+}
+
+button { /* наследование от род класса*/
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/*-------------- Шрифты --------------*/
+
+@font-face {
+    font-family: 'IBM Plex mono';
+    src: url(fonts/IBMPlexMono-Regular.woff) format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex mono';
+    src: url(fonts/IBMPlexMono-Bold.woff) format('woff');
+    font-weight: bold;
+    font-display: swap;
+}
+
+/*-------------- Тело сайта --------------*/
+
+body { /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+    background-color: #000028;
+    background-attachment: fixed; /* Закрепление на экране */
+    font-family: "IBM Plex mono";
+    color: #f1b2ce;
+    font-size: 18px;
+}
+
+/*-------------- Header --------------*/
+
+header {
+    display: grid;
+    position: relative; /* главный блок */
+    grid-template-rows: 1fr auto;
+    padding: 20px;
+    background-image: url("image/Decorations.svg"), url("image/cover-image-dark.png"); /* Рамки по краям экрана */
+}
+
+header nav ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header nav ul li button {
+    background-color: transparent; /* прозрачный цвет кнопки */
+    font-size: 18px;
+    line-height: 18px; /* выравнивает текст (сжимает его) */
+    padding: 0 13px;
+    border: 0;
+    color: #ff0070;
+    height: 26px;
+}
+
+header nav ul li button:hover {
+    outline: 1px solid #ff0070;
+}
+
+.active {
+    pointer-events: none;
+    outline: 1px solid #ff0070;
+}
+
+/*---------------------------------*/
+
+.rec { /* Надпись REC */
+    position: absolute;
+    top: 20px;
+    right: 27px;
+    color: #ff0070;
+}
+
+.rec::after { /* Точка после REC  |  after - добавление декора после текста */
+    content: "";
+    display: inline-block;
+    background-color: #ff0070; /* Создаю красную точку, т.к есть проблемы с иконкой */
+    box-shadow: 0 0 5px #ff0070; /* Тень вокруг точки  
+    |  [При уменьшении высоты и ширины уходит вниз. хз как это фиксить] */
+    margin-inline-start: 10px;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+/*---------------------------------*/
+
+.text-header { /* div h1+p */
+    padding: 274px 0 116px;
+    display: flex;
+    flex-direction: column;
+    gap: 114px;
+}
+
+.text-h1-header { /* h1 | текст - no focus */
+    display: flex;
+    color: #db00ff;
+    font-weight: 700;
+    font-size: 157px;
+    margin-inline-start: -20px; /* отступ */
+    line-height: 129.53px;
+    text-shadow: 4px 4px 0px #ff0070; /* красная тень для двойного эффекта*/
+}
+
+.text-p-header { /* p */
+    display: flex;
+    width: 491px;
+    align-self: flex-end;
+    margin: auto 0;
+    line-height: 23.4px;
+    background-color: #ff0070;
+
+    justify-content: end;
+    font-weight: 700;
+    background-size: cover;
+    font-size: 18px;
+
+    color: #000028;
+}
+
+/*---------------------------------*/
+
