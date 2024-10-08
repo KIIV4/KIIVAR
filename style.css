@@ -287,4 +287,22 @@ section:last-child .decor { /* текст над картинками */
     grid-area: city;
 }
 
+footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 
+    width: 1024px;
+    height: 768px;
+    background-image: url("image/Decorations.svg");
+}
+
+footer h2 {
+    color: #db00ff;
+    font-size: 157px;
+    font-weight: 700;
+    line-height: 129.53px;
+    text-shadow: 2px 2px 0px #ff0070;
+}
