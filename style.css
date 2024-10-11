@@ -11,22 +11,30 @@ body {
     width: 1024px;
 }
 
-h1,h2,h3,h4,p { /* сброс отступа от текста */
+h1,
+h2,
+h3,
+h4,
+p {
+    /* сброс отступа от текста */
     margin: 0;
 }
 
-ul { /* сброс значений у списка */
+ul {
+    /* сброс значений у списка */
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-img { /* сброс значений у картинок */
+img {
+    /* сброс значений у картинок */
     margin: 0;
     padding: 0;
 }
 
-button { /* наследование от род класса*/
+button {
+    /* наследование от род класса*/
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
@@ -50,10 +58,12 @@ button { /* наследование от род класса*/
 
 /*-------------- Тело сайта --------------*/
 
-body { /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+body {
+    /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
     background-color: #000028;
-    background-attachment: fixed; /* Закрепление на экране */
-    font-family: "IBM Plex mono";
+    background-attachment: fixed;
+    /* Закрепление на экране */
+    font-family: "IBM Plex mono", "monospace";
     color: #f1b2ce;
     font-size: 18px;
 }
@@ -62,10 +72,12 @@ body { /* сохраните в разметке и стилях класс page
 
 header {
     display: grid;
-    position: relative; /* главный блок */
+    position: relative;
+    /* главный блок */
     grid-template-rows: 1fr auto;
     padding: 20px;
-    background-image: url("image/Decorations.svg"), url("image/cover-image-dark.png"); /* Рамки по краям экрана */
+    background-image: url("image/Decorations.svg"), url("image/cover-image-dark.png");
+    /* Рамки по краям экрана */
 }
 
 header nav {
@@ -76,13 +88,17 @@ header nav {
 }
 
 header nav button {
-    background-color: transparent; /* прозрачный цвет кнопки */
+    background-color: transparent;
+    /* прозрачный цвет кнопки */
     font-size: 18px;
-    line-height: 18px; /* выравнивает текст (сжимает его) */
+    line-height: 18px;
+    /* выравнивает текст (сжимает его) */
     padding: 0 13px;
     border: 0;
     color: #ff0070;
     height: 26px;
+
+    cursor: pointer;
 }
 
 header nav button:hover {
@@ -96,18 +112,22 @@ header nav button:hover {
 
 /*---------------------------------*/
 
-.rec { /* Надпись REC */
+.rec {
+    /* Надпись REC */
     position: absolute;
     top: 20px;
     right: 27px;
     color: #ff0070;
 }
 
-.rec::after { /* Точка после REC  |  after - добавление декора после текста */
+.rec::after {
+    /* Точка после REC  |  after - добавление декора после текста */
     content: "";
     display: inline-block;
-    background-color: #ff0070; /* Создаю красную точку, т.к есть проблемы с иконкой */
-    box-shadow: 0 0 5px #ff0070; /* Тень вокруг точки  
+    background-color: #ff0070;
+    /* Создаю красную точку, т.к есть проблемы с иконкой */
+    box-shadow: 0 0 5px #ff0070;
+    /* Тень вокруг точки  
     |  [При уменьшении высоты и ширины уходит вниз. хз как это фиксить] */
     margin-inline-start: 10px;
     border-radius: 50%;
@@ -117,24 +137,29 @@ header nav button:hover {
 
 /*---------------------------------*/
 
-.text-header { /* div h1+p */
+.text-header {
+    /* div h1+p */
     padding: 274px 0 116px;
     display: flex;
     flex-direction: column;
     gap: 114px;
 }
 
-.text-h1-header { /* h1 | текст - no focus */
+.text-h1-header {
+    /* h1 | текст - no focus */
     display: flex;
     color: #db00ff;
     font-weight: 700;
     font-size: 157px;
-    margin-inline-start: -20px; /* отступ */
+    margin-inline-start: -20px;
+    /* отступ */
     line-height: 129.53px;
-    text-shadow: 4px 4px 0px #ff0070; /* красная тень для двойного эффекта*/
+    text-shadow: 4px 4px 0 #ff0070;
+    /* красная тень для двойного эффекта*/
 }
 
-.text-p-header { /* p */
+.text-p-header {
+    /* p */
     display: flex;
     width: 491px;
     align-self: flex-end;
@@ -202,7 +227,7 @@ section h2 {
 
 .main-text {
     font-size: 18px;
-    font-family: "IBM Plex mono";
+    font-family: "IBM Plex mono", "monospace";
     font-weight: 400;
     line-height: 23.4px;
     color: #f1b2ce;
@@ -239,21 +264,24 @@ section:nth-child(3) {
 
 
 /*---------------------------------------------*/
-section:last-child { /* Структура блока с картинками */
+section:last-child {
+    /* Структура блока с картинками */
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto auto;
     grid-template-areas:
-    "title title title"
-    "sun sun ice"
-    "kaseta book ice"
-    "kaseta city city";
+        "title title title"
+        "sun sun ice"
+        "kaseta book ice"
+        "kaseta city city";
 }
 
-section:last-child .decor { /* текст над картинками */
+section:last-child .decor {
+    /* текст над картинками */
     grid-area: title;
 }
+
 /*----------------------------------------------*/
 
 
@@ -263,7 +291,8 @@ section:last-child .decor { /* текст над картинками */
 .image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* На весь блок */
+    object-fit: cover;
+    /* На весь блок */
 }
 
 .image-sun {
@@ -303,5 +332,5 @@ footer h2 {
     font-size: 157px;
     font-weight: 700;
     line-height: 129.53px;
-    text-shadow: 2px 2px 0px #ff0070;
+    text-shadow: 2px 2px 0 #ff0070;
 }
