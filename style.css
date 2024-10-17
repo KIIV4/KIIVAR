@@ -127,7 +127,7 @@ header nav button:hover {
     background-color: #ff0070;
     /* Создаю красную точку, т.к есть проблемы с иконкой */
     box-shadow: 0 0 5px #ff0070;
-    /* Тень вокруг точки  
+    /* Тень вокруг точки
     |  [При уменьшении высоты и ширины уходит вниз. хз как это фиксить] */
     margin-inline-start: 10px;
     border-radius: 50%;
@@ -231,6 +231,17 @@ section h2 {
     font-weight: 400;
     line-height: 23.4px;
     color: #f1b2ce;
+}
+
+.text-link {
+    font-family: "IBM Plex mono", "monospace";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.4px;
+    text-align: left;
+    color: #f1b2ce;
+    text-decoration: none;
+    text-shadow: 1px 2px 0 #ff0070;
 }
 
 
